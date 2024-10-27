@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGROWW</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-
+    <title>Result</title>
     
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
@@ -15,49 +12,13 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="/crop-recommend">Crop</a></li>
                 <li><a href="/fertilizer">Fertilizer</a></li>
-                <li><a href="/disease">Fertilizer</a></li>
-
             </ul>
         </nav>
     </header>
-
-    <div class="banner">
-        <h1>CROP AND FERTILIZER RECOMMENDATION SYSTEM <br>AND <BR> DISEASE PREDICTION SYSTEM</h1>
-
+    <div class="reco">
+        <h1 style="text-align: center;">Recommended Crop</h1>
+        <h2 style="text-align: center;">Recommended Crop: {{ prediction }}</h2>
     </div>
-
-    <section class="about-us">
-        <h2 style="text-align: center;">About Us</h2>
-        <p>"Crop & Fertilizer Recommendations and Disease prediction is your trusted partner in agricultural success. 
-            With our expertise and dedication, we provide personalized recommendations to help you achieve optimal crop yields and combat diseases effectively. 
-            We're committed to supporting farmers like you with practical solutions tailored to your needs and region. 
-            Let's grow together!"</p>
-    </section>
-    <h2 style="text-align: center; font-size: 40px;">Our Services</h2>
-    <section class="services">
-        <div class="card" onclick="location.href='crop-recommend'">
-            <img src="{{ url_for('static', filename='images/crop.jpg') }}" height="300px">
-            <h2>Crop Recommendation</h2>
-            <p style="font-size: 25px; text-align: justify;">Recommendation about the type of crops to be cultivated which is best suited
-                for the respective conditions</p>
-        </div>
-        <div class="card" onclick="location.href='/fertilizer'">
-            <img src="{{ url_for('static', filename='images/fertilizer.jpg') }}" height="300px">
-            <h2>Fertilizer Recommendation</h2>
-            <p style="font-size: 25px; text-align: justify;">Recommendation about the type of fertilizer best suited for the particular soil
-                and the recommended crop</p>
-        </div>
-
-        <div class="card" onclick="location.href='/fertilizer'">
-            <img src="{{ url_for('static', filename='images/fertilizer.jpg') }}" height="300px">
-            <h2>Disease Prediction</h2>
-            <p style="font-size: 25px; text-align: justify;">Prediction about the type of diseases affected by the plant using plant leaf image
-            </p>
-
-</div>
-
-    </section>
-
     <footer>
         <ul>
             <li>
